@@ -1,0 +1,360 @@
+@use "./_variables.scss" as *;
+@use './media.scss' as *;
+
+// Softline block
+.softline {
+  padding: 20px 70px 30px;
+
+  h2 {
+    text-align: left;
+    color: $red-second;
+  }
+
+  p {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 120%;
+    text-align: left;
+    color: #444444;
+    margin: 0 0 10px;
+  }
+
+  &-mission {
+    background-image: url('/src/images/mission-left.png'), url('/src/images/mission-right.png');
+    background-repeat: no-repeat, no-repeat;
+    background-position: left center, right center;
+    background-size: auto, auto;
+    background-color: $red;
+    margin: 80px 0;
+    padding: 80px 70px;
+
+    h2, p {
+      color: #fff;
+      text-align: center;
+    }
+  }
+}
+
+@include media(md) {
+  .softline {
+    h2 {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    p {
+      font-size: 32px;
+      text-align: center;
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .softline {
+    padding: 33px 7px;
+    margin-top: 0;
+
+    h2 {
+      margin: 0 0 10px 0;
+    }
+
+    p {
+      margin: 0;
+    }
+
+    &-mission {
+      background-image: url('/src/images/mission-left-mob.png'), url('/src/images/mission-right-mob.png');
+    }
+  }
+}
+
+// Common info block
+.common-info {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 40px 0;
+  row-gap: 20px;
+  font-family: $font-base;
+
+  &-blocks {
+    width: 50%;
+
+    &:last-child {
+      width: 65%;
+    }
+
+    &__title {
+      font-size: 40px;
+      font-weight: 600;
+      line-height: 80%;
+      color: $red;
+      text-align: center;
+    }
+
+    &__text {
+      font-size: 16px;
+      line-height: 150%;
+      text-align: center;
+    }
+  }
+}
+
+@include media(md) {
+  .common-info {
+    display: none;
+  }
+}
+
+// Business block
+.business {
+  margin: 80px 0;
+  padding: 0 8px;
+
+  h2 {
+    text-align: center;
+  }
+
+  &-items {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 7px;
+  }
+
+  &-item {
+    position: relative;
+    overflow: hidden;
+    height: 60px;
+
+    h3 {
+      position: relative;
+      display: inline-block;
+      margin: 0 0 20px 0;
+
+      &:after {
+        content: '';
+        display: block;
+        width: 36px;
+        height: 36px;
+        background-image: url("data:image/svg+xml,%3Csvg width='36' height='36' viewBox='0 0 36 36' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11.5715 14.7858L18.0001 21.2143L24.4287 14.7858' stroke='white' stroke-width='2'/%3E%3C/svg%3E%0A");
+        position: absolute;
+        right: -36px;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+    }
+
+    img {
+      position: absolute;
+      object-fit: cover;
+      width: 100%;
+      height: 100%;
+    }
+
+    &__overlay {
+      background: rgba(25, 50, 90, 0.75);
+      box-sizing: border-box;
+      color: #fff;
+      padding: 0 10px;
+    }
+
+    &:hover &__overlay {
+      transform: translateY(0%);
+    }
+  }
+}
+
+@include media(md) {
+  .business {
+    padding: 0;
+
+    h2 {
+      margin-bottom: 30px;
+    }
+
+    p {
+      font-size: 17px;
+      line-height: 140%;
+    }
+
+    &-items {
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+    }
+
+    &-item {
+      min-height: 260px;
+
+      h3 {
+        margin: 0 0 30px 0;
+
+        &:after {
+          display: none;
+        }
+      }
+
+      &__overlay {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        padding: 30px 20px;
+        transform: translateY(calc(100% - 80px));
+        transition: transform 0.4s ease;
+      }
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .business {
+    &-item {
+      h3 {
+        position: static;
+        display: block;
+
+        &:after {
+          right: 5px;
+          top: 10px;
+          transform: translateY(0);
+        }
+      }
+
+      &__title {
+        padding-right: 25px;
+      }
+
+      &__overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+      }
+
+      &:not(.business-item--active) {
+        .business-item__overlay {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+        }
+
+        h3.business-item__title {
+          margin: 0;
+        }
+
+        .business-item__text {
+          height: 0;
+          margin: 0;
+          opacity: 0;
+        }
+      }
+
+      &.business-item--active {
+        min-height: 240px;
+        height: auto;
+
+        img {
+          height: 100%;
+          z-index: -1;
+        }
+
+        h3 {
+          &:after {
+            transform: rotate(180deg);
+          }
+        }
+
+        p {
+          line-height: 140%;
+          margin: 0;
+        }
+
+        .business-item__overlay {
+          position: static;
+          padding: 16px 10px;
+        }
+      }
+    }
+  }
+}
+
+// Compensation block
+.compensation {
+  margin: 80px 0;
+  padding: 20px 8px;
+  box-shadow: 0 0 40px rgba(0, 0, 0, 0.06);
+
+  h2 {
+    text-align: center;
+    margin-bottom: 28px;
+  }
+
+  &-items {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 5px;
+    margin-top: 40px;
+    row-gap: 20px;
+  }
+
+  &-item {
+    width: calc(50% - 5px);
+    text-align: center;
+
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+
+    &__text {
+      font-size: 18px;
+      margin-top: 10px;
+    }
+  }
+
+  &-top {
+    padding-bottom: 70px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  }
+
+  &-bottom {
+    padding: 70px 0;
+
+    h3 {
+      font-size: 22px;
+      font-weight: 600;
+      line-height: 120%;
+      text-align: center;
+
+      span {
+        color: $red-second;
+      }
+    }
+  }
+}
+
+@include media(lg) {
+  .compensation {
+    &-item {
+      width: calc(20% - 5px);
+    }
+  }
+}
+
+@include media(md) {
+  .compensation {
+    margin: 80px 70px;
+    padding: 20px 30px;
+
+    h2 {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    h3 {
+      font-size: 40px;
+    }
+  }
+}

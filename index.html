@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Проект с Vite</title>
+    <link rel="stylesheet" href="src/styles/fonts/fonts.css" />
+  </head>
+  <body>
+
+  <header class="header">
+    <div class="header-inner">
+      <div class="logo">
+        <img src="src/images/logo.png" alt="Лого">
+      </div>
+
+      <div class="header-right">
+        <ul>
+          <li><a href="#">Облачные решения</a></li>
+          <li><a href="#">Кибербезопасность</a></li>
+          <li><a href="#">Импортозамещение</a></li>
+          <li><a href="#">Цифровая трансформация</a></li>
+        </ul>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <div class="softline">
+      <h2>Softline</h2>
+      <p>Ведущий поставщик IT-решений и сервисов.* Мы предлагаем комплексные IT-решения, облака, программное и аппаратное обеспечение, решения по цифровой трансформации и кибербезопасности, а также широкий спектр IT-услуг.</p>
+    </div>
+
+    <div class="common-info">
+      <div class="common-info-blocks">
+        <div class="common-info-blocks__title">>30 лет</div>
+        <div class="common-info-blocks__text">на IT-рынке</div>
+      </div>
+      <div class="common-info-blocks">
+        <div class="common-info-blocks__title">4600</div>
+        <div class="common-info-blocks__text">сотрудников в России</div>
+      </div>
+      <div class="common-info-blocks">
+        <div class="common-info-blocks__title">25</div>
+        <div class="common-info-blocks__text">городов России</div>
+      </div>
+      <div class="common-info-blocks">
+        <div class="common-info-blocks__title">2000+</div>
+        <div class="common-info-blocks__text">разработчиков</div>
+      </div>
+      <div class="common-info-blocks">
+        <div class="common-info-blocks__title">3000+</div>
+        <div class="common-info-blocks__text">сотрудников ежегодно проходят оценку и обучение</div>
+      </div>
+    </div>
+
+    <div class="menu">
+      <div class="office-dropdown js-office-dropdown">
+        <button class="office-dropdown__toggle js-office-dropdown-toggle">
+          Офисы Softline <img src="src/images/arrow.png" alt="">
+        </button>
+        <div class="office-dropdown__menu js-office-dropdown-menu">
+          <div class="office-dropdown__region">
+            <h4 class="office-dropdown__title">Москва</h4>
+          </div>
+          <div class="office-dropdown__region">
+            <h4 class="office-dropdown__title">Центр<span class="office-dropdown__title--arrow"></span></h4>
+            <ul class="office-dropdown__list">
+              <li class="office-dropdown__item">Воронеж</li>
+              <li class="office-dropdown__item">Ярославль</li>
+              <li class="office-dropdown__item">Белгород</li>
+            </ul>
+          </div>
+          <div class="office-dropdown__region">
+            <h4 class="office-dropdown__title">Северо-Запад<span class="office-dropdown__title--arrow"></span></h4>
+            <ul class="office-dropdown__list">
+              <li class="office-dropdown__item">Санкт-Петербург</li>
+              <li class="office-dropdown__item">Калининград</li>
+            </ul>
+          </div>
+          <div class="office-dropdown__region">
+            <h4 class="office-dropdown__title">Юг<span class="office-dropdown__title--arrow"></span></h4>
+            <ul class="office-dropdown__list">
+              <li class="office-dropdown__item">Ростов-на-Дону</li>
+              <li class="office-dropdown__item">Краснодар</li>
+              <li class="office-dropdown__item">Волгоград</li>
+            </ul>
+          </div>
+          <div class="office-dropdown__region">
+            <h4 class="office-dropdown__title">Волга<span class="office-dropdown__title--arrow"></span></h4>
+            <ul class="office-dropdown__list">
+              <li class="office-dropdown__item">Казань</li>
+              <li class="office-dropdown__item">Самара</li>
+              <li class="office-dropdown__item">Уфа</li>
+              <li class="office-dropdown__item">Оренбург</li>
+              <li class="office-dropdown__item">Нижний Новгород</li>
+            </ul>
+          </div>
+          <div class="office-dropdown__region">
+            <h4 class="office-dropdown__title">Урад<span class="office-dropdown__title--arrow"></span></h4>
+            <ul class="office-dropdown__list">
+              <li class="office-dropdown__item">Екатеринбург</li>
+              <li class="office-dropdown__item">Челябинск</li>
+              <li class="office-dropdown__item">Пермь</li>
+              <li class="office-dropdown__item">Сургут</li>
+              <li class="office-dropdown__item">Тюмень</li>
+              <li class="office-dropdown__item">Ижевск</li>
+            </ul>
+          </div>
+          <div class="office-dropdown__region">
+            <h4 class="office-dropdown__title">Сибирь<span class="office-dropdown__title--arrow"></span></h4>
+            <ul class="office-dropdown__list">
+              <li class="office-dropdown__item">Новосибирск</li>
+              <li class="office-dropdown__item">Омск</li>
+              <li class="office-dropdown__item">Томск</li>
+              <li class="office-dropdown__item">Красноярск</li>
+              <li class="office-dropdown__item">Иркутск</li>
+            </ul>
+          </div>
+          <div class="office-dropdown__region">
+            <h4 class="office-dropdown__title">Дальний Восток<span class="office-dropdown__title--arrow"></span></h4>
+            <ul class="office-dropdown__list">
+              <li class="office-dropdown__item">Хабаровск</li>
+              <li class="office-dropdown__item">Владивосток</li>
+            </ul>
+          </div>
+          <!-- другие регионы по аналогии -->
+        </div>
+      </div>
+
+      <div class="region-menu">
+        <div class="region-menu-inner">
+          <button class="region-menu__button" data-region="all">Все</button>
+          <button class="region-menu__button" data-region="moskov">Москва</button>
+          <button class="region-menu__button" data-region="center">Центр</button>
+          <button class="region-menu__button" data-region="northwest">Северо-Запад</button>
+          <button class="region-menu__button" data-region="south">Юг</button>
+          <button class="region-menu__button" data-region="volga">Волга</button>
+          <button class="region-menu__button" data-region="ural">Урал</button>
+          <button class="region-menu__button" data-region="sibir">Сибирь</button>
+          <button class="region-menu__button" data-region="far-east">Дальний Восток</button>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="map">
+      <div class="map-inner">
+        <img src="src/images/map.png" alt="Карта России" class="map__image">
+
+        <!-- Города -->
+        <div class="map__city map__city--moscow" data-region="moskov all" title="Москва">Москва</div>
+
+
+        <div class="map__city map__city--kalinin" data-region="northwest all" title="Калининград">Калининград</div>
+        <div class="map__city map__city--spb" data-region="northwest all" title="Санкт-Петербург">Санкт-Петербург</div>
+
+        <div class="map__city map__city--yaros" data-region="center all" title="Ярославль">Ярославль</div>
+        <div class="map__city map__city--belg" data-region="center all" title="Белгород">Белгород</div>
+        <div class="map__city map__city--voronezh" data-region="center all" title="Воронеж">Воронеж</div>
+
+        <div class="map__city map__city--rostov" data-region="south all" title="Ростов-на-Дону">Ростов-на-Дону</div>
+        <div class="map__city map__city--krasnodar" data-region="south all" title="Краснодар">Краснодар</div>
+        <div class="map__city map__city--volgograd" data-region="south all" title="Волгоград">Волгоград</div>
+
+        <div class="map__city map__city--nnovgorod" data-region="volga all" title="Н.Новгород">Н.Новгород</div>
+        <div class="map__city map__city--samara" data-region="volga all" title="Самара">Самара</div>
+        <div class="map__city map__city--kazan" data-region="volga all" title="Казань">Казань</div>
+        <div class="map__city map__city--ufa" data-region="volga all" title="Уфа">Уфа</div>
+        <div class="map__city map__city--orenburg" data-region="volga all" title="Оренбург">Оренбург</div>
+
+        <div class="map__city map__city--igevsk" data-region="ural all" title="Ижевск">Ижевск</div>
+        <div class="map__city map__city--perm" data-region="ural all" title="Пермь">Пермь</div>
+        <div class="map__city map__city--surgut" data-region="ural all" title="Сургут">Сургут</div>
+        <div class="map__city map__city--ekater" data-region="ural all" title="Екатеринбург">Екатеринбург</div>
+        <div class="map__city map__city--chelabnsk" data-region="ural all" title="Челябинск">Челябинск</div>
+        <div class="map__city map__city--tymen" data-region="ural all" title="Тюмень">Тюмень</div>
+
+        <div class="map__city map__city--omsk" data-region="sibir all" title="Омск">Омск</div>
+        <div class="map__city map__city--nsibirsk" data-region="sibir all" title="Новосибирск">Новосибирск</div>
+        <div class="map__city map__city--tomsk" data-region="sibir all" title="Томск">Томск</div>
+        <div class="map__city map__city--kryarsk" data-region="sibir all" title="Красноярск">Красноярск</div>
+        <div class="map__city map__city--irkutsk" data-region="sibir all" title="Иркутск">Иркутск</div>
+
+        <div class="map__city map__city--vladivostok" data-region="far-east all" title="Владивосток">Владивосток</div>
+        <div class="map__city map__city--habarovsk" data-region="far-east all" title="Хабаровск">Хабаровск</div>
+      </div>
+    </div>
+
+    <div class="softline softline-mission">
+      <h2>Миссия Softline</h2>
+      <p>Мы помогаем организациям трансформироваться, работать эффективно и безопасно в условиях цифровой экономики.</p>
+    </div>
+
+    <div class="business">
+      <h2>Направления бизнеса</h2>
+      <div class="business-items">
+        <div class="business-item">
+          <img src="src/images/business-1.png" alt="Решения Softline">
+          <div class="business-item__overlay">
+            <h3 class="business-item__title">Решения Softline</h3>
+            <p class="business-item__text">ГК Softline предлагает клиентам собственную линейку оборудования (ПК, серверы, торговое оборудование и проч.), разработку программных продуктов, облачных решений, решений в области информационной безопасности.</p>
+          </div>
+        </div>
+        <div class="business-item">
+          <img src="src/images/business-2.png" alt="Кибербезопасность">
+          <div class="business-item__overlay">
+            <h3 class="business-item__title">Кибербезопасность</h3>
+            <p class="business-item__text">Softline обладает всеми необходимыми государственными лицензиями для организации проектов по информационной безопасности и аттестации.</p>
+          </div>
+        </div>
+        <div class="business-item">
+          <img src="src/images/business-3.png" alt="Импортозамещение">
+          <div class="business-item__overlay">
+            <h3 class="business-item__title">Импортозамещение</h3>
+            <p class="business-item__text">ГК Softline обладает широчайшим портфелем решений и услуг для импортозамещения, включая ПО и оборудование собственного производства.</p>
+          </div>
+        </div>
+        <div class="business-item">
+          <img src="src/images/business-4.png" alt="Облачные решения">
+          <div class="business-item__overlay">
+            <h3 class="business-item__title">Облачные решения</h3>
+            <p class="business-item__text">Softline использует современные облачные решения как российских, так и международных вендоров для масштабирования бизнеса своих клиентов. Подписки, услуги, трансформация.</p>
+          </div>
+        </div>
+        <div class="business-item">
+          <img src="src/images/business-5.png" alt="Цифровая трансформация и разработка ПО">
+          <div class="business-item__overlay">
+            <h3 class="business-item__title">Цифровая трансформация и разработка ПО</h3>
+            <p class="business-item__text">Softline использует современные технологи и новые возможности для увеличения производительности бизнеса заказчика. В штате ГК Softline - 2000+ разработчиков, которые трансформируют ПО под нужды конкретного предприятия.
+            </p>
+          </div>
+        </div>
+        <div class="business-item">
+          <img src="src/images/business-6.png" alt="Техническая поддержка Softline">
+          <div class="business-item__overlay">
+            <h3 class="business-item__title">Техническая поддержка Softline</h3>
+            <p class="business-item__text">200+ инженеров, 24 часа в сутки, 7 дней в неделю, 12 месяцев в году, сервисное партнерство с 30+ мировыми производителями.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="compensation">
+      <div class="compensation-top">
+        <h2>Компенсационный пакет</h2>
+        <div class="compensation-items">
+          <div class="compensation-item">
+            <img src="src/images/compensation-1.svg" alt="Дмс">
+            <div class="compensation-item__text">
+              Дмс
+            </div>
+          </div>
+          <div class="compensation-item">
+            <img src="src/images/compensation-2.svg" alt="Выходной в день рождения">
+            <div class="compensation-item__text">
+              Выходной в день рождения
+            </div>
+          </div>
+          <div class="compensation-item">
+            <img src="src/images/compensation-3.svg" alt="Корпоративная мобильная связь">
+            <div class="compensation-item__text">
+              Корпоративная мобильная связь
+            </div>
+          </div>
+          <div class="compensation-item">
+            <img src="src/images/compensation-4.svg" alt="Корпоративные скидки на спорт">
+            <div class="compensation-item__text">
+              Корпоративные скидки на спорт
+            </div>
+          </div>
+          <div class="compensation-item">
+            <img src="src/images/compensation-5.svg" alt="LTI">
+            <div class="compensation-item__text">
+              LTI
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="compensation-bottom">
+        <h3>Программа дополнительной мотивации <br> <span>доплата 12% от суммы</span></h3>
+        <div class="compensation-items">
+          <div class="compensation-item">
+            <img src="src/images/compensation-6.svg" alt="Оргтехники">
+            <div class="compensation-item__text">
+              Оргтехники
+            </div>
+          </div>
+          <div class="compensation-item">
+            <img src="src/images/compensation-1.svg" alt="ДМС">
+            <div class="compensation-item__text">
+              ДМС
+            </div>
+          </div>
+          <div class="compensation-item">
+            <img src="src/images/compensation-7.svg" alt="Ипотеки">
+            <div class="compensation-item__text">
+              Ипотеки
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="slider">
+      <div class="swiper">
+        <div class="slider-title">
+          <h2>Корпоративная жизнь</h2>
+          <div class="slider-buttons">
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+          </div>
+        </div>
+        <div class="swiper-wrapper">
+          <div class="swiper-slide"><img alt="Слайдер 1" src="src/images/slide-1.png" /></div>
+          <div class="swiper-slide"><img alt="Слайдер 2" src="src/images/slide-2.png" /></div>
+          <div class="swiper-slide"><img alt="Слайдер 3" src="src/images/slide-3.png" /></div>
+          <div class="swiper-slide"><img alt="Слайдер 4" src="src/images/slide-4.png" /></div>
+          <div class="swiper-slide"><img alt="Слайдер 5" src="src/images/slide-5.png" /></div>
+        </div>
+
+        <!-- Навигация -->
+
+        <div class="swiper-pagination"></div>
+      </div>
+    </div>
+  </main>
+
+    <script src="/js/lib/swiper-bundle.min.js"></script>
+    <script type="module" src="/src/js/main.js"></script>
+  </body>
+</html>

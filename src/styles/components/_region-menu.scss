@@ -1,0 +1,390 @@
+@use "./_variables.scss" as *;
+@use './media.scss' as *;
+
+.menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  flex-direction: column;
+  flex-wrap: wrap;
+  position: relative;
+  padding-top: 24px;
+  gap: 5px;
+  box-shadow: 0 0 40px rgba(0, 0, 0, 0.06);
+
+  &--active {
+    .region-menu, + .map {
+      opacity: .2;
+    }
+  }
+}
+
+.office-dropdown {
+  display: inline-block;
+
+  &__toggle {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: none;
+    border: none;
+    color: #444;
+    font-size: 24px;
+    font-weight: 600;
+    cursor: pointer;
+
+    img {
+      transform: rotate(180deg);
+    }
+  }
+
+  &__menu {
+    display: none;
+    position: absolute;
+    left: 0;
+    background: #fff;
+    color: #444444;
+    box-sizing: border-box;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+    z-index: 10;
+    flex-wrap: wrap;
+    gap: 24px;
+
+    &__title {
+      font-size: 18px;
+      font-weight: 600;
+      margin-top: 0;
+    }
+
+    &__item {
+      font-size: 18px;
+    }
+  }
+
+  &--active &__toggle {
+    img {
+      transform: rotate(0deg);
+    }
+  }
+
+  &--active &__menu {
+    display: flex;
+    width: 100%;
+  }
+
+  &__title {
+    margin-bottom: 10px;
+    font-size: 14px;
+    font-weight: bold;
+    position: relative;
+
+    &--arrow {
+      border: 6px solid transparent;
+      border-top: 7px solid #444;
+      font-size: 0;
+      margin-left: 5px;
+      pointer-events: none;
+    }
+
+    &--active {
+      span {
+        border: 6px solid transparent;
+        border-bottom: 7px solid #444;
+        vertical-align: super;
+        bottom: 2px;
+        position: relative;
+      }
+    }
+  }
+
+  &__list {
+    display: none;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  &__item {
+    font-size: 14px;
+    margin-bottom: 5px;
+    cursor: pointer;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+.region-menu {
+  max-width: 100%;
+  overflow-x: auto;
+
+  &-inner {
+    display: flex;
+    gap: 20px;
+  }
+
+  &__button {
+    font-family: 'Proxima Nova Condensed', sans-serif;
+    background: none;
+    border: none;
+    font-size: 18px;
+    line-height: 20px;
+    font-weight: 600;
+    color: #444;
+    cursor: pointer;
+    padding: 30px 0 27px;
+    border-bottom: 3px solid transparent;
+    white-space: nowrap;
+
+    &--active {
+      color: $red;
+      border-color: $red;
+    }
+  }
+}
+
+.map {
+  margin: 80px auto;
+  overflow-x: auto;
+
+  &-inner {
+    position: relative;
+    width: 1190px;
+  }
+
+  &__image {
+    width: 100%;
+    display: block;
+  }
+
+  &__city {
+    display: none;
+    position: absolute;
+    font-size: 10px;
+
+    &:before {
+      content: '';
+      display: block;
+      width: 7px;
+      height: 7px;
+      background: #444;
+      border-radius: 50%;
+      margin: 0 auto;
+    }
+
+    &--active {
+      display: block;
+    }
+
+    &--moscow {
+      top: 37.5%;
+      left: 10.5%;
+    }
+
+    &--voronezh {
+      top: 41%;
+      left: 6.5%;
+    }
+
+    &--yekaterinburg {
+      top: 55%;
+      left: 24%;
+    }
+
+    &--vladivostok {
+      top: 94%;
+      left: 79%;
+    }
+
+    &--kalinin {
+      top: 20.5%;
+      left: 1.5%;
+    }
+
+    &--spb {
+      top: 21.5%;
+      left: 9.5%;
+    }
+
+    &--yaros {
+      top: 32.5%;
+      left: 13.5%;
+    }
+
+    &--belg {
+      top: 45.5%;
+      left: 6%;
+    }
+
+    &--rostov {
+      top: 53.5%;
+      left: 5.5%;
+    }
+
+    &--krasnodar {
+      top: 62.5%;
+      left: 2.5%;
+    }
+
+    &--volgograd {
+      top: 60.5%;
+      left: 7.5%;
+    }
+
+    &--nnovgorod {
+      top: 44.5%;
+      left: 14.5%;
+    }
+
+    &--samara {
+      top: 50.5%;
+      left: 14.5%;
+    }
+
+    &--kazan {
+      top: 49.5%;
+      left: 20%;
+    }
+
+    &--ufa {
+      top: 55.5%;
+      left: 21%;
+    }
+
+    &--orenburg {
+      top: 61%;
+      left: 17%;
+    }
+
+    &--igevsk {
+      top: 48%;
+      left: 26%;
+    }
+
+    &--perm {
+      top: 49%;
+      left: 30%;
+    }
+
+    &--surgut {
+      top: 50%;
+      left: 34%;
+    }
+
+    &--ekater {
+      top: 54%;
+      left: 24%;
+    }
+
+    &--chelabnsk {
+      top: 60%;
+      left: 24.5%;
+    }
+
+    &--tymen {
+      top: 60%;
+      left: 32.5%;
+    }
+
+    &--omsk {
+      top: 79%;
+      left: 38%;
+    }
+
+    &--nsibirsk {
+      top: 76%;
+      left: 41%;
+    }
+
+    &--tomsk {
+      top: 76.5%;
+      left: 47%;
+    }
+
+    &--kryarsk {
+      top: 76.5%;
+      left: 51%;
+    }
+
+    &--irkutsk {
+      top: 81.5%;
+      left: 57%;
+    }
+
+    &--habarovsk {
+      top: 82.5%;
+      left: 81%;
+    }
+  }
+}
+
+@include media(xxl) {
+  .menu {
+    flex-direction: row;
+    align-items: center;
+    padding: 0 70px;
+    gap: 15px;
+  }
+}
+
+@include media(md) {
+  .menu {
+    padding-left: 70px;
+    padding-right: 70px;
+  }
+
+  .office-dropdown {
+    &__menu {
+      top: 100%;
+      padding: 30px 70px;
+    }
+
+    &__list {
+      display: block;
+    }
+
+    &__title, &__item {
+      font-size: 18px;
+
+      &--arrow {
+        display: none;
+      }
+    }
+  }
+}
+
+
+@media (max-width: 767px) {
+  .menu {
+    padding: 0 7px;
+  }
+
+  .map {
+    margin-bottom: 0;
+  }
+
+  .office-dropdown {
+    padding-top: 24px;
+
+    &__title {
+      &--active {
+        & + ul {
+          display: block;
+        }
+      }
+    }
+
+    &--active .office-dropdown__menu {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 5px;
+    }
+
+    &__menu {
+      top: 40px;
+      padding: 10px 7px;
+    }
+  }
+}

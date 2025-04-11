@@ -1,0 +1,48 @@
+@use "./_variables.scss" as *;
+@use './media.scss' as *;
+
+body {
+  font-family: $font-base;
+}
+
+main {
+  max-width: $container;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+h1 {
+  font-weight: 600;
+}
+
+h2 {
+  font-size: 28px;
+  line-height: 1;
+  font-weight: 600;
+  color: #444;
+  margin-bottom: 20px;
+}
+
+h3 {
+  font-size: 20px;
+  font-weight: 600;
+  margin: 0 0 20px 0;
+}
+
+button {
+  padding: 0;
+}
+
+img {
+  vertical-align: top;
+}
+
+@include media(md) {
+  h2 {
+    font-size: 56px;
+  }
+
+  h3 {
+    font-size: 24px;
+  }
+}

@@ -1,0 +1,76 @@
+@use "./_variables.scss" as *;
+@use './media.scss' as *;
+
+.header {
+  max-width: $container;
+  padding: 0 15px;
+  margin: 0 auto;
+
+  &-inner {
+    display: flex;
+    flex-direction: column;
+    align-items: self-start;
+    justify-content: space-between;
+    box-sizing: border-box;
+    min-height: 85px;
+    padding: 0 70px;
+    border: 1px solid #D9D9D9;
+  }
+
+  ul {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+    padding-left: 0;
+
+    a {
+      font-size: 18px;
+      line-height: 20px;
+      font-weight: 600;
+      text-decoration: none;
+      color: #444;
+    }
+  }
+}
+
+
+@include media(xl) {
+  .header {
+    &-inner {
+      flex-direction: row;
+      align-items: center;
+
+      &-inner {
+        padding: 0 70px;
+      }
+    }
+  }
+}
+@media (max-width: 1199px) {
+  .header {
+    &-inner {
+      padding: 20px 7px;
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .header {
+    &-inner {
+      ul {
+        display: block;
+        margin-bottom: 0;
+
+        li {
+          display: inline-block;
+          margin-right: 5px;
+        }
+
+        a {
+          font-size: 14px;
+          line-height: 16px;
+        }
+      }
+    }
+  }
+}

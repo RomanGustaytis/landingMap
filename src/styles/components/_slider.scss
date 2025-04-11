@@ -1,0 +1,87 @@
+@use "./_variables.scss" as *;
+@use './media.scss' as *;
+
+.slider {
+  margin: 70px 0;
+
+  img {
+    width: 100%;
+  }
+
+  .swiper {
+    padding-bottom: 30px;
+  }
+
+  &-title {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+
+    h2 {
+      margin: 0;
+    }
+  }
+
+  &-buttons {
+    display: none;
+    width: 132px;
+    gap: 20px;
+    position: relative;
+  }
+
+  .swiper-button-prev, .swiper-button-next {
+    top: 50%;
+    background-color: #F0F0F0;
+    border-radius: 50%;
+    width: 56px;
+    height: 56px;
+
+    &:after {
+      color: $red;
+      font-size: 20px;
+    }
+  }
+
+  .swiper-button-prev {
+    left: 0;
+  }
+
+  .swiper-button-next {
+    right: 0;
+  }
+
+  .swiper-pagination {
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+    padding-top: 20px;
+
+    &-bullet {
+      flex: 1;
+      height: 6px;
+      margin: 0!important;
+      background-color: #E3E3E3;
+      border-radius: 2px;
+      opacity: 1;
+      transition: background-color 0.3s ease;
+
+      &-active {
+        background-color: $red;
+      }
+    }
+  }
+}
+
+@include media(md) {
+  .slider {
+    padding: 0 70px;
+    &-title {
+      margin-bottom: 40px;
+    }
+
+    &-buttons {
+      display: flex;
+    }
+  }
+}
+
