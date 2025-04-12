@@ -1,6 +1,6 @@
-import { defineConfig } from 'vite'
+// vite.config.js
+import { defineConfig } from 'vite';
 
-// https://vite.dev/config/
 export default defineConfig({
-  base: "/landingMap/",
-})
+  base: '/landingMap/', // 🔥 обязательно
+});
